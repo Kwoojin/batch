@@ -1,0 +1,18 @@
+spring:
+  #  h2:
+  #    console:
+  #      enabled: true
+
+  batch:
+    jdbc:
+      initialize-schema: always #운영 환경에서는 never 등록 후 script 관리
+
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/batch
+    #    url: jdbc:h2:mem:test_db;MODE=MYSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  logging.level:
+    org.hibernate.SQL: debug
